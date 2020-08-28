@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container" style="padding-top:9%;">
+ <div class="row">
+     <div class="col-md-4">
+      <div class="card">
+          <div class="card-header">
+               <button class="btn"
+               onclick="save();"
+               ><i class="fa fa-bookmark-o"
+                style="font-size:larger"
+                aria-hidden="true"></i></button>
+          </div>
+             <div class="card-body">
+                <audio controls id="audio">
+                    <source src="./turkishmarch.mp3" type="audio/ogg">
+                    <source src="./turkishmarch.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+             </div>
+      </div>
+     </div>
+     <div class="col-md-6" id="bookmarks">
+        <div class="card">
+            <div class="card-header">
+              <h3>Bookmarks</h3>
+            </div>
+               <div class="card-body">
+                <table class="table stripped">
+                    <tr>
+                        <th>Audio</th>
+                        <th>Resume From Here</th>
+                    </tr>
+                    <tr>
+                    <td id="resumeTime"></td>
+                    <td><button class="btn btn-success" onclick="resume();">
+                        <i class="fa fa-play" aria-hidden="true"></i>
+                    </button></td>
+                    </tr>
+                </table>
+               </div>
+        </div>
+     </div>
+ </div>
+</div>   
+</body>
+</html>
