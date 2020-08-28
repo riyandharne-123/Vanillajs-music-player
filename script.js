@@ -14,3 +14,5 @@ function save(){
   function resume(){
     document.getElementById("audio").currentTime=myStorage.getItem('resumeTime');
   }
+  var time =myStorage.getItem('resumeTime');
+  document.getElementById('resumeTime').innerText=time+'s';
